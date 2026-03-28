@@ -42,7 +42,6 @@ title: "Airship × Eloqua Integration"
       </div>
     </div>
   </div>
-  <!-- Tech stack tags -->
   <div class="border-t border-indigo-800/50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap gap-3">
       {% assign tags = "Eloqua Cloud App,AWS Lambda,SQS,DynamoDB,Angular,Serverless Framework,Node.js" | split: "," %}
@@ -53,30 +52,28 @@ title: "Airship × Eloqua Integration"
   </div>
 </section>
 
-<!-- ─── TWO MODES ──────────────────────────────────────────────── -->
+<!-- ─── HOW IT WORKS ───────────────────────────────────────────── -->
 <section id="how-it-works" class="bg-slate-50">
   <div class="max-w-6xl mx-auto px-6 py-20">
     <div class="text-center mb-16">
-      <h2 class="text-3xl lg:text-4xl font-light text-indigo-950 mb-4" style="font-family: 'Cinzel', serif;">Two ways to reach your audience</h2>
-      <p class="text-slate-500 max-w-xl mx-auto">Whether you're running an automated campaign or a one-off blast to a segment, the integration handles both.</p>
+      <h2 class="text-3xl lg:text-4xl font-light text-indigo-950 mb-4" style="font-family: 'Cinzel', serif;">Native inside Eloqua</h2>
+      <p class="text-slate-500 max-w-xl mx-auto">The integration lives as a Cloud App inside your Eloqua instance. Marketers work entirely within the Eloqua campaign builder — no external tools or logins.</p>
     </div>
 
-    <!-- Mode 1: Campaign Canvas -->
-    <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
-      <div>
-        <div class="inline-block text-sky-600 text-xs font-semibold tracking-widest uppercase mb-4">Mode 1</div>
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div class="lg:sticky lg:top-24">
         <h3 class="text-2xl font-light text-indigo-950 mb-4" style="font-family: 'Cinzel', serif;">Campaign Canvas Action</h3>
         <p class="text-slate-600 leading-relaxed mb-6">
-          Drag and drop the Airship step into any Eloqua campaign. As contacts flow through the action step, push notifications are sent individually and in real time. Delivery status syncs back to Eloqua automatically — successes and failures both tracked.
+          Drag and drop the Airship step into any Eloqua campaign. As contacts flow through the action step, push notifications are queued and sent individually. The integration then reports delivery status back to Eloqua — successes and failures both recorded per contact.
         </p>
-        <ul class="space-y-3">
+        <ul class="space-y-3 mb-8">
           <li class="flex items-start gap-3 text-slate-600">
             <i class="fa-solid fa-check text-sky-500 mt-1 text-sm"></i>
-            Native drag-and-drop in the campaign canvas
+            Native drag-and-drop step in the campaign canvas
           </li>
           <li class="flex items-start gap-3 text-slate-600">
             <i class="fa-solid fa-check text-sky-500 mt-1 text-sm"></i>
-            Per-contact real-time delivery as they flow through the step
+            Per-contact delivery as they flow through the step
           </li>
           <li class="flex items-start gap-3 text-slate-600">
             <i class="fa-solid fa-check text-sky-500 mt-1 text-sm"></i>
@@ -84,45 +81,37 @@ title: "Airship × Eloqua Integration"
           </li>
           <li class="flex items-start gap-3 text-slate-600">
             <i class="fa-solid fa-check text-sky-500 mt-1 text-sm"></i>
-            Status synced back to Eloqua for each contact
+            Delivery status synced back to Eloqua automatically
+          </li>
+          <li class="flex items-start gap-3 text-slate-600">
+            <i class="fa-solid fa-check text-sky-500 mt-1 text-sm"></i>
+            Personalized messages using Eloqua contact field data
           </li>
         </ul>
-      </div>
-      <div class="space-y-4">
         <div class="rounded-xl overflow-hidden shadow-2xl border border-slate-200">
           <img src="/assets/images/campaign-canvas.png" alt="Airship step in Eloqua campaign canvas" class="w-full" />
         </div>
-        <div class="rounded-xl overflow-hidden shadow-xl border border-slate-200">
-          <img src="/assets/images/configure-filled.png" alt="Push message configuration" class="w-full" />
-        </div>
       </div>
-    </div>
 
-    <!-- Mode 2: Segment Push -->
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div class="order-2 lg:order-1 rounded-xl overflow-hidden shadow-2xl border border-slate-200">
-        <img src="/assets/images/segment-push.png" alt="Segment push configuration" class="w-full" />
-      </div>
-      <div class="order-1 lg:order-2">
-        <div class="inline-block text-sky-600 text-xs font-semibold tracking-widest uppercase mb-4">Mode 2</div>
-        <h3 class="text-2xl font-light text-indigo-950 mb-4" style="font-family: 'Cinzel', serif;">Segment Push</h3>
-        <p class="text-slate-600 leading-relaxed mb-6">
-          Send a one-time bulk push to an entire Eloqua segment. Define your audience in Eloqua, open the Airship panel, pick your app and template, and send. Contact data is fetched from Eloqua in bulk and processed in the background.
-        </p>
-        <ul class="space-y-3">
-          <li class="flex items-start gap-3 text-slate-600">
-            <i class="fa-solid fa-check text-sky-500 mt-1 text-sm"></i>
-            Ad-hoc bulk send to any Eloqua segment
-          </li>
-          <li class="flex items-start gap-3 text-slate-600">
-            <i class="fa-solid fa-check text-sky-500 mt-1 text-sm"></i>
-            Contacts fetched directly from Eloqua via Bulk API
-          </li>
-          <li class="flex items-start gap-3 text-slate-600">
-            <i class="fa-solid fa-check text-sky-500 mt-1 text-sm"></i>
-            Processed asynchronously — no timeout risk on large segments
-          </li>
-        </ul>
+      <div class="space-y-6">
+        <div>
+          <p class="text-xs font-semibold text-sky-600 tracking-widest uppercase mb-2">Step 1 — Authenticate</p>
+          <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+            <img src="/assets/images/login.png" alt="Login inside Eloqua Cloud Action" class="w-full" />
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-sky-600 tracking-widest uppercase mb-2">Step 2 — Configure</p>
+          <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+            <img src="/assets/images/configure-filled.png" alt="Push message configuration" class="w-full" />
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-sky-600 tracking-widest uppercase mb-2">Step 3 — Preview template</p>
+          <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+            <img src="/assets/images/template-preview.png" alt="Template merge fields preview" class="w-full" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -170,18 +159,18 @@ title: "Airship × Eloqua Integration"
 
       <div class="p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all">
         <div class="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
-          <i class="fa-solid fa-arrows-rotate text-indigo-600 text-lg"></i>
+          <i class="fa-solid fa-user-tag text-indigo-600 text-lg"></i>
         </div>
-        <h4 class="font-medium text-indigo-950 mb-2">Automatic status sync</h4>
-        <p class="text-slate-500 text-sm leading-relaxed">Delivery results — successes and failures — are imported back into Eloqua automatically after each send.</p>
+        <h4 class="font-medium text-indigo-950 mb-2">Personalization</h4>
+        <p class="text-slate-500 text-sm leading-relaxed">Templates support merge fields mapped to Eloqua contact data — send each contact a message with their name, city, or any custom field.</p>
       </div>
 
       <div class="p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all">
         <div class="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
-          <i class="fa-solid fa-user-tag text-indigo-600 text-lg"></i>
+          <i class="fa-solid fa-arrows-rotate text-indigo-600 text-lg"></i>
         </div>
-        <h4 class="font-medium text-indigo-950 mb-2">Personalization</h4>
-        <p class="text-slate-500 text-sm leading-relaxed">Templates support merge fields mapped to Eloqua contact data — send each contact a message with their own name, city, or any custom field.</p>
+        <h4 class="font-medium text-indigo-950 mb-2">Automatic status sync</h4>
+        <p class="text-slate-500 text-sm leading-relaxed">Delivery results — successes and failures — are imported back into Eloqua automatically after each send.</p>
       </div>
 
       <div class="p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all">
@@ -201,7 +190,7 @@ title: "Airship × Eloqua Integration"
   <div class="max-w-6xl mx-auto px-6 py-20">
     <div class="text-center mb-16">
       <h2 class="text-3xl lg:text-4xl font-light text-indigo-950 mb-4" style="font-family: 'Cinzel', serif;">In action</h2>
-      <p class="text-slate-500">The integration runs inside Eloqua's Cloud Action Configuration panel — no separate app to install.</p>
+      <p class="text-slate-500">Every screen runs inside the Eloqua Cloud Action panel — no separate app or login.</p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -237,7 +226,7 @@ title: "Airship × Eloqua Integration"
         <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200 group-hover:shadow-xl transition-shadow">
           <img src="/assets/images/template-preview.png" alt="Template merge fields and push notification preview" class="w-full" />
         </div>
-        <figcaption class="text-center text-sm text-slate-500 mt-3">Template preview with personalization merge fields</figcaption>
+        <figcaption class="text-center text-sm text-slate-500 mt-3">Template preview — merge fields and message content</figcaption>
       </figure>
 
       <figure class="group">
@@ -256,25 +245,15 @@ title: "Airship × Eloqua Integration"
   <div class="max-w-6xl mx-auto px-6 py-20">
     <div class="text-center mb-16">
       <h2 class="text-3xl lg:text-4xl font-light text-indigo-950 mb-4" style="font-family: 'Cinzel', serif;">Architecture</h2>
-      <p class="text-slate-500 max-w-xl mx-auto">Built on AWS with an async processing pipeline that handles scale without blocking the campaign.</p>
+      <p class="text-slate-500 max-w-xl mx-auto">Built on AWS with an async queue that decouples Eloqua from Airship — no timeouts, no blocking the campaign.</p>
     </div>
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="max-w-3xl mx-auto">
       <figure>
         <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
           <img src="/assets/images/architecture-campaign.png" alt="Campaign action architecture diagram" class="w-full bg-white p-2" />
         </div>
         <figcaption class="text-center text-sm text-slate-500 mt-4">
-          <strong class="text-slate-700">Campaign Canvas flow</strong><br>
-          Eloqua → Lambda → SQS → Airship API → Eloqua Bulk Import
-        </figcaption>
-      </figure>
-      <figure>
-        <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
-          <img src="/assets/images/architecture-segment.png" alt="Segment push architecture diagram" class="w-full bg-white p-2" />
-        </div>
-        <figcaption class="text-center text-sm text-slate-500 mt-4">
-          <strong class="text-slate-700">Segment Push flow</strong><br>
-          Eloqua Bulk Export → Lambda → Airship Bulk API
+          Eloqua Campaign → AWS Lambda → SQS → Airship API → Eloqua Bulk Import (status sync)
         </figcaption>
       </figure>
     </div>
@@ -294,7 +273,7 @@ title: "Airship × Eloqua Integration"
         <div class="bg-indigo-800/60 p-4 text-center text-sm font-medium text-slate-300 border-r border-indigo-700/50">Eloqua Webhooks (DIY)</div>
         <div class="bg-sky-800/60 p-4 text-center text-sm font-semibold text-sky-200">This integration</div>
 
-        {% assign rows = "Eloqua UI|Raw webhook config|Native drag-and-drop step;App & template selection|Manual API config|Searchable autocomplete;Scheduling|Custom build required|Built-in date & time pickers;Status sync to Eloqua|Custom build required|Automatic;Time to value|Weeks to months|Days;Maintenance|Your team's responsibility|Managed service" | split: ";" %}
+        {% assign rows = "Eloqua UI|Raw webhook config|Native drag-and-drop step;App & template selection|Manual API config|Searchable autocomplete;Scheduling|Custom build required|Built-in date & time pickers;Personalization|Custom build required|Merge fields from Eloqua contact data;Status sync to Eloqua|Custom build required|Automatic;Time to value|Weeks to months|Days;Maintenance|Your team's responsibility|Managed service" | split: ";" %}
         {% for row in rows %}
           {% assign cells = row | split: "|" %}
           <div class="col-span-1 bg-indigo-900/30 p-4 text-sm text-slate-300 border-t border-indigo-700/50 border-r border-indigo-700/50">{{ cells[0] }}</div>
