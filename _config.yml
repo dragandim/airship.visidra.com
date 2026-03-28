@@ -1,0 +1,20 @@
+url: "https://airship.visidra.com"
+baseurl: ""
+title: "Airship × Eloqua Integration"
+
+google-analytics: G-ZGVETCG6PX
+
+plugins:
+  - jekyll-postcss
+
+postcss:
+  cache: false
+
+exclude:
+  - .git
+  - .github
+  - .gitignore
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/

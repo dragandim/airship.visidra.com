@@ -1,0 +1,304 @@
+---
+layout: page
+title: "Airship × Eloqua Integration"
+---
+
+<!-- ─── NAVBAR ─────────────────────────────────────────────────── -->
+<header class="sticky top-0 z-50 bg-indigo-950/95 backdrop-blur border-b border-indigo-800/50">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 h-[60px]">
+    <a href="/" class="flex items-center gap-3">
+      <img src="/assets/images/home-2.svg" class="h-[28px]" alt="Visidra" />
+      <span class="text-slate-300 font-light tracking-widest text-sm uppercase" style="font-family: 'Cinzel', serif;">Airship × Eloqua</span>
+    </a>
+    <div class="flex items-center gap-6">
+      <a href="#features" class="text-slate-400 hover:text-white text-sm transition-colors">Features</a>
+      <a href="#how-it-works" class="text-slate-400 hover:text-white text-sm transition-colors">How it works</a>
+      <a href="#contact" class="bg-indigo-600 hover:bg-indigo-500 text-white text-sm px-4 py-2 rounded transition-colors">Request Demo</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ─── HERO ───────────────────────────────────────────────────── -->
+<section class="bg-gradient-to-br from-indigo-950 via-indigo-900 to-sky-900 text-white">
+  <div class="max-w-6xl mx-auto px-6 py-24 lg:py-32">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 text-sky-400 text-sm font-medium tracking-wider uppercase mb-6">
+        <span class="w-8 h-px bg-sky-400"></span>
+        Eloqua Cloud App
+      </div>
+      <h1 class="text-4xl lg:text-6xl font-light leading-tight mb-6" style="font-family: 'Cinzel', serif;">
+        Send Airship push notifications from your Eloqua campaigns
+      </h1>
+      <p class="text-lg lg:text-xl text-slate-300 font-light leading-relaxed mb-10 max-w-2xl">
+        A native Eloqua Cloud App that lets marketers configure and send personalized mobile push notifications through Airship — directly from the campaign canvas, with no custom development required.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#contact" class="bg-indigo-500 hover:bg-indigo-400 text-white px-8 py-3 rounded font-medium transition-colors">
+          Request a Demo
+        </a>
+        <a href="#how-it-works" class="border border-indigo-400/50 hover:border-indigo-300 text-slate-300 hover:text-white px-8 py-3 rounded font-medium transition-colors">
+          See how it works
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Tech stack tags -->
+  <div class="border-t border-indigo-800/50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap gap-3">
+      {% assign tags = "Eloqua Cloud App,AWS Lambda,SQS,DynamoDB,Angular,Serverless Framework,Node.js" | split: "," %}
+      {% for tag in tags %}
+      <span class="text-xs text-slate-400 bg-indigo-900/60 border border-indigo-700/40 px-3 py-1 rounded-full">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ─── TWO MODES ──────────────────────────────────────────────── -->
+<section id="how-it-works" class="bg-slate-50">
+  <div class="max-w-6xl mx-auto px-6 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl lg:text-4xl font-light text-indigo-950 mb-4" style="font-family: 'Cinzel', serif;">Two ways to reach your audience</h2>
+      <p class="text-slate-500 max-w-xl mx-auto">Whether you're running an automated campaign or a one-off blast to a segment, the integration handles both.</p>
+    </div>
+
+    <!-- Mode 1: Campaign Canvas -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+      <div>
+        <div class="inline-block text-sky-600 text-xs font-semibold tracking-widest uppercase mb-4">Mode 1</div>
+        <h3 class="text-2xl font-light text-indigo-950 mb-4" style="font-family: 'Cinzel', serif;">Campaign Canvas Action</h3>
+        <p class="text-slate-600 leading-relaxed mb-6">
+          Drag and drop the Airship step into any Eloqua campaign. As contacts flow through the action step, push notifications are sent individually and in real time. Delivery status syncs back to Eloqua automatically — successes and failures both tracked.
+        </p>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-slate-600">
+            <span class="text-sky-500 mt-0.5">✓</span>
+            Native drag-and-drop in the campaign canvas
+          </li>
+          <li class="flex items-start gap-3 text-slate-600">
+            <span class="text-sky-500 mt-0.5">✓</span>
+            Per-contact real-time delivery as they flow through the step
+          </li>
+          <li class="flex items-start gap-3 text-slate-600">
+            <span class="text-sky-500 mt-0.5">✓</span>
+            Immediate or scheduled delivery
+          </li>
+          <li class="flex items-start gap-3 text-slate-600">
+            <span class="text-sky-500 mt-0.5">✓</span>
+            Status synced back to Eloqua for each contact
+          </li>
+        </ul>
+      </div>
+      <div class="rounded-xl overflow-hidden shadow-2xl border border-slate-200">
+        <img src="/assets/images/campaign-canvas.png" alt="Airship step in Eloqua campaign canvas" class="w-full" />
+      </div>
+    </div>
+
+    <!-- Mode 2: Segment Push -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="order-2 lg:order-1 rounded-xl overflow-hidden shadow-2xl border border-slate-200">
+        <img src="/assets/images/segment-push.png" alt="Segment push configuration" class="w-full" />
+      </div>
+      <div class="order-1 lg:order-2">
+        <div class="inline-block text-sky-600 text-xs font-semibold tracking-widest uppercase mb-4">Mode 2</div>
+        <h3 class="text-2xl font-light text-indigo-950 mb-4" style="font-family: 'Cinzel', serif;">Segment Push</h3>
+        <p class="text-slate-600 leading-relaxed mb-6">
+          Send a one-time bulk push to an entire Eloqua segment. Define your audience in Eloqua, open the Airship panel, pick your app and template, and send. Contact data is fetched from Eloqua in bulk and processed in the background.
+        </p>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-slate-600">
+            <span class="text-sky-500 mt-0.5">✓</span>
+            Ad-hoc bulk send to any Eloqua segment
+          </li>
+          <li class="flex items-start gap-3 text-slate-600">
+            <span class="text-sky-500 mt-0.5">✓</span>
+            Contacts fetched directly from Eloqua via Bulk API
+          </li>
+          <li class="flex items-start gap-3 text-slate-600">
+            <span class="text-sky-500 mt-0.5">✓</span>
+            Processed asynchronously — no timeout risk on large segments
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FEATURES ───────────────────────────────────────────────── -->
+<section id="features" class="bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl lg:text-4xl font-light text-indigo-950 mb-4" style="font-family: 'Cinzel', serif;">Everything you need out of the box</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all">
+        <div class="text-2xl mb-3">📱</div>
+        <h4 class="font-medium text-indigo-950 mb-2">Multi-app support</h4>
+        <p class="text-slate-500 text-sm leading-relaxed">Connect multiple Airship apps. Marketers pick the target app from a dropdown — all configured per Eloqua site.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all">
+        <div class="text-2xl mb-3">🔍</div>
+        <h4 class="font-medium text-indigo-950 mb-2">Template autocomplete</h4>
+        <p class="text-slate-500 text-sm leading-relaxed">Search and select push templates directly from your Airship template library. No copy-pasting IDs.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all">
+        <div class="text-2xl mb-3">🕐</div>
+        <h4 class="font-medium text-indigo-950 mb-2">Immediate or scheduled</h4>
+        <p class="text-slate-500 text-sm leading-relaxed">Send immediately when a contact hits the step, or schedule for a specific date and time.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all">
+        <div class="text-2xl mb-3">🤖</div>
+        <h4 class="font-medium text-indigo-950 mb-2">Android & iOS targeting</h4>
+        <p class="text-slate-500 text-sm leading-relaxed">Target Android, iOS, or both. Platform selection is saved per campaign step configuration.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all">
+        <div class="text-2xl mb-3">🔄</div>
+        <h4 class="font-medium text-indigo-950 mb-2">Automatic status sync</h4>
+        <p class="text-slate-500 text-sm leading-relaxed">Delivery results — successes and failures — are imported back into Eloqua automatically after each send.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all">
+        <div class="text-2xl mb-3">📊</div>
+        <h4 class="font-medium text-indigo-950 mb-2">Delivery logs</h4>
+        <p class="text-slate-500 text-sm leading-relaxed">Full notification history per campaign step — sent count, failed count, timestamps, and processing status.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── SCREENSHOTS ────────────────────────────────────────────── -->
+<section class="bg-slate-50">
+  <div class="max-w-6xl mx-auto px-6 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl lg:text-4xl font-light text-indigo-950 mb-4" style="font-family: 'Cinzel', serif;">In action</h2>
+      <p class="text-slate-500">The integration runs inside Eloqua's Cloud Action Configuration panel — no separate app to install.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <figure class="group">
+        <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200 group-hover:shadow-xl transition-shadow">
+          <img src="/assets/images/app-selector.png" alt="App selector dropdown" class="w-full" />
+        </div>
+        <figcaption class="text-center text-sm text-slate-500 mt-3">Select from all configured Airship apps</figcaption>
+      </figure>
+
+      <figure class="group">
+        <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200 group-hover:shadow-xl transition-shadow">
+          <img src="/assets/images/template-autocomplete.png" alt="Template autocomplete" class="w-full" />
+        </div>
+        <figcaption class="text-center text-sm text-slate-500 mt-3">Search templates by name with autocomplete</figcaption>
+      </figure>
+
+      <figure class="group">
+        <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200 group-hover:shadow-xl transition-shadow">
+          <img src="/assets/images/delivery-type.png" alt="Delivery type selection" class="w-full" />
+        </div>
+        <figcaption class="text-center text-sm text-slate-500 mt-3">Choose between immediate and scheduled delivery</figcaption>
+      </figure>
+
+      <figure class="group">
+        <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200 group-hover:shadow-xl transition-shadow">
+          <img src="/assets/images/scheduled-push.png" alt="Scheduled push with date and time" class="w-full" />
+        </div>
+        <figcaption class="text-center text-sm text-slate-500 mt-3">Pick a date and time for scheduled sends</figcaption>
+      </figure>
+
+      <figure class="group md:col-span-2">
+        <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200 group-hover:shadow-xl transition-shadow">
+          <img src="/assets/images/campaign-canvas.png" alt="Campaign canvas with Airship step" class="w-full" />
+        </div>
+        <figcaption class="text-center text-sm text-slate-500 mt-3">Airship step placed in the Eloqua campaign canvas</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── ARCHITECTURE ───────────────────────────────────────────── -->
+<section class="bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl lg:text-4xl font-light text-indigo-950 mb-4" style="font-family: 'Cinzel', serif;">Architecture</h2>
+      <p class="text-slate-500 max-w-xl mx-auto">Built on AWS with an async processing pipeline that handles scale without blocking the campaign.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      <figure>
+        <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+          <img src="/assets/images/architecture-campaign.png" alt="Campaign action architecture diagram" class="w-full bg-white p-2" />
+        </div>
+        <figcaption class="text-center text-sm text-slate-500 mt-4">
+          <strong class="text-slate-700">Campaign Canvas flow</strong><br>
+          Eloqua → Lambda → SQS → Airship API → Eloqua Bulk Import
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200">
+          <img src="/assets/images/architecture-segment.png" alt="Segment push architecture diagram" class="w-full bg-white p-2" />
+        </div>
+        <figcaption class="text-center text-sm text-slate-500 mt-4">
+          <strong class="text-slate-700">Segment Push flow</strong><br>
+          Eloqua Bulk Export → Lambda → Airship Bulk API
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ─── VS WEBHOOKS ────────────────────────────────────────────── -->
+<section class="bg-gradient-to-br from-indigo-950 to-indigo-900 text-white">
+  <div class="max-w-6xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-light mb-4" style="font-family: 'Cinzel', serif;">Why not just use Eloqua Webhooks?</h2>
+      <p class="text-slate-400 max-w-xl mx-auto">You could build a webhook-based integration from scratch. Here's what that comparison looks like in practice.</p>
+    </div>
+    <div class="max-w-3xl mx-auto">
+      <div class="grid grid-cols-3 gap-0 rounded-xl overflow-hidden border border-indigo-700/50">
+        <div class="col-span-1 bg-indigo-900/60 p-4 border-r border-indigo-700/50"></div>
+        <div class="bg-indigo-800/60 p-4 text-center text-sm font-medium text-slate-300 border-r border-indigo-700/50">Eloqua Webhooks (DIY)</div>
+        <div class="bg-sky-800/60 p-4 text-center text-sm font-semibold text-sky-200">This integration</div>
+
+        {% assign rows = "Eloqua UI|Raw webhook config|Native drag-and-drop step;App & template selection|Manual API config|Searchable autocomplete;Scheduling|Custom build required|Built-in date & time pickers;Status sync to Eloqua|Custom build required|Automatic;Time to value|Weeks to months|Days;Maintenance|Your team's responsibility|Managed service" | split: ";" %}
+        {% for row in rows %}
+          {% assign cells = row | split: "|" %}
+          <div class="col-span-1 bg-indigo-900/30 p-4 text-sm text-slate-300 border-t border-indigo-700/50 border-r border-indigo-700/50">{{ cells[0] }}</div>
+          <div class="bg-indigo-900/20 p-4 text-sm text-slate-400 border-t border-indigo-700/50 border-r border-indigo-700/50">{{ cells[1] }}</div>
+          <div class="bg-sky-900/30 p-4 text-sm text-sky-300 border-t border-indigo-700/50">{{ cells[2] }}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ────────────────────────────────────────────────────── -->
+<section id="contact" class="bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-24 text-center">
+    <h2 class="text-3xl lg:text-4xl font-light text-indigo-950 mb-4" style="font-family: 'Cinzel', serif;">Ready to integrate Airship with Eloqua?</h2>
+    <p class="text-slate-500 max-w-xl mx-auto mb-10 leading-relaxed">
+      Drop me a line to request a demo or ask about setup for your Eloqua instance. The integration is production-tested and can be up and running in days.
+    </p>
+    <a href="mailto:dragan@visidra.com?subject=Airship%20%C3%97%20Eloqua%20Integration%20%E2%80%94%20Demo%20Request"
+       class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white px-10 py-4 rounded text-lg font-medium transition-colors">
+      dragan@visidra.com
+    </a>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────────────────────── -->
+<footer class="bg-indigo-950 border-t border-indigo-800/50">
+  <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <img src="/assets/images/home-2.svg" class="h-[22px] opacity-70" alt="Visidra" />
+      <span class="text-slate-500 text-sm">Built by <a href="https://www.visidra.com" class="text-slate-400 hover:text-white transition-colors">Visidra</a></span>
+    </div>
+    <div class="flex gap-6 text-sm text-slate-500">
+      <a href="https://www.airship.com" class="hover:text-slate-300 transition-colors" target="_blank" rel="noopener">Airship</a>
+      <a href="https://www.oracle.com/cx/marketing/eloqua/" class="hover:text-slate-300 transition-colors" target="_blank" rel="noopener">Oracle Eloqua</a>
+      <a href="https://www.visidra.com" class="hover:text-slate-300 transition-colors" target="_blank" rel="noopener">visidra.com</a>
+    </div>
+  </div>
+</footer>
