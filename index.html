@@ -88,8 +88,13 @@ title: "Airship × Eloqua Integration"
           </li>
         </ul>
       </div>
-      <div class="rounded-xl overflow-hidden shadow-2xl border border-slate-200">
-        <img src="/assets/images/campaign-canvas.png" alt="Airship step in Eloqua campaign canvas" class="w-full" />
+      <div class="space-y-4">
+        <div class="rounded-xl overflow-hidden shadow-2xl border border-slate-200">
+          <img src="/assets/images/campaign-canvas.png" alt="Airship step in Eloqua campaign canvas" class="w-full" />
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-xl border border-slate-200">
+          <img src="/assets/images/configure-filled.png" alt="Push message configuration" class="w-full" />
+        </div>
       </div>
     </div>
 
@@ -173,6 +178,14 @@ title: "Airship × Eloqua Integration"
 
       <div class="p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all">
         <div class="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
+          <i class="fa-solid fa-user-tag text-indigo-600 text-lg"></i>
+        </div>
+        <h4 class="font-medium text-indigo-950 mb-2">Personalization</h4>
+        <p class="text-slate-500 text-sm leading-relaxed">Templates support merge fields mapped to Eloqua contact data — send each contact a message with their own name, city, or any custom field.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all">
+        <div class="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
           <i class="fa-solid fa-chart-bar text-indigo-600 text-lg"></i>
         </div>
         <h4 class="font-medium text-indigo-950 mb-2">Delivery logs</h4>
@@ -210,21 +223,28 @@ title: "Airship × Eloqua Integration"
         <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200 group-hover:shadow-xl transition-shadow">
           <img src="/assets/images/delivery-type.png" alt="Delivery type selection" class="w-full" />
         </div>
-        <figcaption class="text-center text-sm text-slate-500 mt-3">Choose between immediate and scheduled delivery</figcaption>
+        <figcaption class="text-center text-sm text-slate-500 mt-3">Immediate or scheduled delivery</figcaption>
       </figure>
 
       <figure class="group">
         <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200 group-hover:shadow-xl transition-shadow">
           <img src="/assets/images/scheduled-push.png" alt="Scheduled push with date and time" class="w-full" />
         </div>
-        <figcaption class="text-center text-sm text-slate-500 mt-3">Pick a date and time for scheduled sends</figcaption>
+        <figcaption class="text-center text-sm text-slate-500 mt-3">Scheduled send — date and time filled in</figcaption>
       </figure>
 
-      <figure class="group md:col-span-2">
+      <figure class="group">
         <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200 group-hover:shadow-xl transition-shadow">
-          <img src="/assets/images/campaign-canvas.png" alt="Campaign canvas with Airship step" class="w-full" />
+          <img src="/assets/images/template-preview.png" alt="Template merge fields and push notification preview" class="w-full" />
         </div>
-        <figcaption class="text-center text-sm text-slate-500 mt-3">Airship step placed in the Eloqua campaign canvas</figcaption>
+        <figcaption class="text-center text-sm text-slate-500 mt-3">Template preview with personalization merge fields</figcaption>
+      </figure>
+
+      <figure class="group">
+        <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200 group-hover:shadow-xl transition-shadow">
+          <img src="/assets/images/logs.png" alt="Notification delivery logs" class="w-full" />
+        </div>
+        <figcaption class="text-center text-sm text-slate-500 mt-3">Delivery log — status, success and failed counts</figcaption>
       </figure>
 
     </div>
